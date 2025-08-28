@@ -51,10 +51,10 @@ body {
 @media (min-width: 1070px) {
     .lanyard-container {
         position: absolute;
-        top: 60px;
+        top: 40px;
         right: 150px;
         z-index: 100;
-        animation: gentleSwing 8s ease-in-out infinite, realisticDrop 3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        animation: gentleSwing 4s ease-in-out infinite, realisticDrop 3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
         transform-origin: top center;
     }
 }
@@ -62,39 +62,27 @@ body {
 /* Mobile Simple Design (1069px and below) */
 @media (max-width: 1069px) {
     .lanyard-container {
-        display: none;
+        position: relative;
+        margin: 30px auto 20px auto;
+        top: 0;
+        right: 0;
+        left: 0;
+        z-index: 100;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        animation: gentleSwing 4s ease-in-out infinite, realisticDrop 3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        transform-origin: top center;
     }
-    
-    /* Simple photo section for mobile - REDUCED PADDING */
+    .id-card {
+        width: 220px;
+        height: 300px;
+        margin-top: 0;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.3), 0 4px 12px rgba(255,255,255,0.08);
+        border-radius: 16px;
+    }
     .mobile-photo-section {
-        display: block;
-        text-align: center;
-        padding: 20px 20px 10px 20px;
-        background: rgba(255, 255, 255, 0.05);
-        margin: 10px 20px;
-        border-radius: 15px;
-    }
-    
-    .mobile-photo {
-        width: 150px;
-        height: 150px;
-        border-radius: 50%;
-        background: url('famous.png');
-        background-size: cover;
-        background-position: center;
-        margin: 0 auto 15px;
-        border: 3px solid rgba(255, 255, 255, 0.2);
-    }
-    
-    .mobile-info h2 {
-        font-size: 24px;
-        margin-bottom: 8px;
-    }
-    
-    .mobile-info p {
-        font-size: 16px;
-        color: #cccccc;
-        margin-bottom: 4px;
+        display: none !important;
     }
 }
 
@@ -302,7 +290,7 @@ body {
         linear-gradient(145deg, rgba(30, 30, 30, 0.3), rgba(15, 15, 15, 0.5)),
         url('famous.png');
     background-size: cover;
-    background-position: center;
+    background-position: center 45px;
     background-repeat: no-repeat;
     border-radius: 20px;
     position: relative;
